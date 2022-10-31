@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/yandex-cloud/k8s-csi-s3/pkg/driver"
+	"github.com/gexops/k8s-csi-s3/pkg/driver"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 

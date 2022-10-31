@@ -10,10 +10,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Setup Docker Actions
+      uses: gexops/actions@main
+      id: actions
+      with:
+        username: ${{ secrets.docker_username }}
+        password: ${{ secrets.docker_password }}
+        semantic_version_enabled: 'true'
 
     - name: Push Docker
-      run: (echo '${{ secrets.REGISTRY_KEY }}' | docker login --username json_key --password-stdin cr.yandex) && make push
+      run: make push
 
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:

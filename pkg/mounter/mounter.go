@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/yandex-cloud/k8s-csi-s3/pkg/s3"
+	"github.com/gexops/k8s-csi-s3/pkg/s3"
 	"github.com/golang/glog"
 	"github.com/mitchellh/go-ps"
 	"k8s.io/kubernetes/pkg/util/mount"

@@ -34,7 +34,7 @@ type driver struct {
 
 var (
 	vendorVersion = "v1.2.0"
-	driverName    = "ru.yandex.s3.csi"
+	driverName    = "ai.gex.s3.csi"
 )
 
 // New initializes the driver
