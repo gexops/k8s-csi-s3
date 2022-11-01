@@ -16,7 +16,7 @@ LABEL description="csi-s3 slim image"
 #ERROR: unable to select packages:
 #  so:libcrypto.so.3 (no such package):
 #    required by: s3fs-fuse-1.91-r1[so:libcrypto.so.3]
-#RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing s3fs-fuse rclone
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing s3fs-fuse rclone
 
 ADD https://github.com/yandex-cloud/geesefs/releases/latest/download/geesefs-linux-amd64 /usr/bin/geesefs
 RUN chmod 755 /usr/bin/geesefs
